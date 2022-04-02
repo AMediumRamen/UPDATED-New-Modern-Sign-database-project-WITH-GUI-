@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1294</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="Customer_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Customer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Payment_button">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Payment</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Order_button">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Order</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Employee_button">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Employee</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Designer_button">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Designer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Fabricator_button">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fabricator</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Welder_button">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Welder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Contractor_button">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Contractor</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Driver_button">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Driver</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Vehicle_button">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>0</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vehicle</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="HOA_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>50</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HOA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Permi_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>100</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Permit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Installation_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>150</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Installation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="InstallationAddr_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>200</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Installation Addr</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="State_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>250</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>State</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Country_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>300</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Country</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Material_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>350</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Material</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Supplier_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>400</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Supplier</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Production_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>450</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Production</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Associative_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>500</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>7</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>PR/MA Associative</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Update_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>710</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Update</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Add_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>640</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Delete_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>780</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delete</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Home_button">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>0</y>
+      <width>141</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>HOME</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>160</y>
+      <width>1011</width>
+      <height>651</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="Home_page">
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>100</y>
+        <width>551</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Bodoni MT Poster Compressed</family>
+        <pointsize>70</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>NEW MODERN SIGN </string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Add_page"/>
+    <widget class="QWidget" name="Update_page"/>
+    <widget class="QWidget" name="Delete_page"/>
+    <widget class="QWidget" name="Customer_page"/>
+    <widget class="QWidget" name="HOA_page"/>
+    <widget class="QWidget" name="Permit_page"/>
+    <widget class="QWidget" name="Installation_page"/>
+    <widget class="QWidget" name="InstallationAddr_page"/>
+    <widget class="QWidget" name="State_page"/>
+    <widget class="QWidget" name="Country_page"/>
+    <widget class="QWidget" name="Material_page"/>
+    <widget class="QWidget" name="Supplier_page"/>
+    <widget class="QWidget" name="Production_page"/>
+    <widget class="QWidget" name="PRMA_page"/>
+    <widget class="QWidget" name="Payment_page"/>
+    <widget class="QWidget" name="Order_page"/>
+    <widget class="QWidget" name="Employee_page"/>
+    <widget class="QWidget" name="Designer_page"/>
+    <widget class="QWidget" name="Vehicle_page"/>
+    <widget class="QWidget" name="Fabricator_page"/>
+    <widget class="QWidget" name="Welder_page"/>
+    <widget class="QWidget" name="Contractor_page"/>
+    <widget class="QWidget" name="Driver_page"/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1294</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
