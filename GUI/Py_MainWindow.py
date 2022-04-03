@@ -2,9 +2,9 @@ import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
 from matplotlib.pyplot import show
-
+from PyQt5 import QtWidgets
 from Ui_MainWindow import Ui_MainWindow
-
+import pyodbc
 
 class MainWindow:
     def __init__(self):
@@ -45,7 +45,29 @@ class MainWindow:
         self.ui.Update_button.clicked.connect(self.showUpdate)
         self.ui.Vehicle_button.clicked.connect(self.showVehicle)
         self.ui.Welder_button.clicked.connect(self.showWelder)
-        
+
+        #LOAD DATA BUTTONS (FUNCTIONS BELOW)
+        self.ui.LoadContractorButton.clicked.connect(self.loadContractor)
+        self.ui.LoadCountryButton.clicked.connect(self.loadCountry)
+        self.ui.LoadCustomerButton.clicked.connect(self.loadCustomer)
+        self.ui.LoadDesignerButton.clicked.connect(self.loadDesigner)
+        self.ui.LoadDriverButton.clicked.connect(self.loadDriver)
+        self.ui.LoadEmployeeButton.clicked.connect(self.loadEmployee)
+        self.ui.LoadFabricatorButton.clicked.connect(self.loadFabricator)
+        self.ui.LoadHOAButton.clicked.connect(self.loadHOA)
+        self.ui.LoadInstallationAddrButton.clicked.connect(self.loadInstallationAddr)
+        self.ui.LoadInstallationButton.clicked.connect(self.loadInstallation)
+        self.ui.LoadMaterialButton.clicked.connect(self.loadMaterial)
+        self.ui.LoadOrderButton.clicked.connect(self.loadOrder)
+        self.ui.LoadPRMAButton.clicked.connect(self.loadPRMA)
+        self.ui.LoadPaymentButton.clicked.connect(self.loadPayment)
+        self.ui.LoadPermitButton.clicked.connect(self.loadPermit)
+        self.ui.LoadProductionButton.clicked.connect(self.loadProduction)
+        self.ui.LoadStateButton.clicked.connect(self.loadState)
+        self.ui.LoadSupplierButton.clicked.connect(self.loadSupplier)
+        self.ui.LoadVehicleButton.clicked.connect(self.loadVehicle)
+        self.ui.LoadWelderButton.clicked.connect(self.loadWelder)
+
 
 
     
@@ -128,6 +150,289 @@ class MainWindow:
 
 
 
+
+
+    #LOAD DATA INTO SPECIFIC TABLES WITHIN RESPECTIVE PAGES
+    def loadContractor(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Contractor")
+        self.ui.ContractorTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.ContractorTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.ContractorTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadCountry(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Country")
+        self.ui.CountryTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.CountryTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.CountryTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+
+    def loadCustomer(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Customer")
+        self.ui.CustomerTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.CustomerTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.CustomerTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadDesigner(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Designer")
+        self.ui.DesignerTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.DesignerTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.DesignerTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadDriver(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Driver")
+        self.ui.DriverTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.DriverTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.DriverTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadEmployee(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Employee")
+        self.ui.EmployeeTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.EmployeeTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.EmployeeTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadFabricator(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Fabricator")
+        self.ui.FabricatorTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.FabricatorTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.FabricatorTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadHOA(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM HOA_ARC")
+        self.ui.HOATable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.HOATable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.HOATable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadInstallationAddr(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Installation Address")
+        self.ui.InstallationAddrTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.InstallationAddrTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.InstallationAddrTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadInstallation(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Installation")
+        self.ui.InstallationTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.InstallationTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.InstallationTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadMaterial(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Material")
+        self.ui.MaterialTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.MaterialTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.MaterialTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadOrder(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM [dbo].[Order]")
+        self.ui.OrderTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.OrderTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.OrderTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadPRMA(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Material_Product")
+        self.ui.PRMATable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.PRMATable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.PRMATable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadPayment(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Payment")
+        self.ui.PaymentTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.PaymentTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.PaymentTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadPermit(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Permit")
+        self.ui.PermitTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.PermitTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.PermitTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadProduction(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Production")
+        self.ui.ProductionTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.ProductionTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.ProductionTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+
+    def loadState(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM State")
+        self.ui.StateTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.StateTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.StateTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadSupplier(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Supplier")
+        self.ui.SupplierTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.SupplierTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.SupplierTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadVehicle(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Vehicle")
+        self.ui.VehicleTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.VehicleTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.VehicleTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
+    
+    def loadWelder(self):
+        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
+                      'Trusted_Connection=yes;')
+        cursor = conn.cursor()
+        result = cursor.execute("SELECT * FROM Welder")
+        self.ui.WelderTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.WelderTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.WelderTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        conn.close()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
