@@ -341,7 +341,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>21</number>
     </property>
     <widget class="QWidget" name="Home_page">
      <widget class="QLabel" name="label">
@@ -367,26 +367,1354 @@
     <widget class="QWidget" name="Add_page"/>
     <widget class="QWidget" name="Update_page"/>
     <widget class="QWidget" name="Delete_page"/>
-    <widget class="QWidget" name="Customer_page"/>
-    <widget class="QWidget" name="HOA_page"/>
-    <widget class="QWidget" name="Permit_page"/>
-    <widget class="QWidget" name="Installation_page"/>
-    <widget class="QWidget" name="InstallationAddr_page"/>
-    <widget class="QWidget" name="State_page"/>
-    <widget class="QWidget" name="Country_page"/>
-    <widget class="QWidget" name="Material_page"/>
-    <widget class="QWidget" name="Supplier_page"/>
-    <widget class="QWidget" name="Production_page"/>
-    <widget class="QWidget" name="PRMA_page"/>
-    <widget class="QWidget" name="Payment_page"/>
-    <widget class="QWidget" name="Order_page"/>
-    <widget class="QWidget" name="Employee_page"/>
-    <widget class="QWidget" name="Designer_page"/>
-    <widget class="QWidget" name="Vehicle_page"/>
-    <widget class="QWidget" name="Fabricator_page"/>
-    <widget class="QWidget" name="Welder_page"/>
-    <widget class="QWidget" name="Contractor_page"/>
-    <widget class="QWidget" name="Driver_page"/>
+    <widget class="QWidget" name="Customer_page">
+     <widget class="QTableWidget" name="CustomerTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Customer_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CustomerLastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CustomerFirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CompanyName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CustomerPhone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CustomerEmail</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadCustomerButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>580</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="HOA_page">
+     <widget class="QTableWidget" name="HOATable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>8</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>HOA_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Email</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ContactPerson</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DateSubmitted</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DateApproved</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadHOAButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Permit_page">
+     <widget class="QTableWidget" name="PermitTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Permit_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ExpDate</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DateApplied</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DateReceived</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadPermitButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Installation_page">
+     <widget class="QTableWidget" name="InstallationTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Installation_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>InstallationAddr_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ProjInstallationDate</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ActInstallationDate</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Installed?</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadInstallationButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="InstallationAddr_page">
+     <widget class="QTableWidget" name="InstallationAddrTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>7</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>InstallationAddr_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>State_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Country_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AddrLine1</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AddrLine2</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>ZipCode</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>City</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadInstallationAddrButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="State_page">
+     <widget class="QTableWidget" name="StateTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>State_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>StateName</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadStateButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Country_page">
+     <widget class="QTableWidget" name="CountryTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Country_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CountryName</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadCountryButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Material_page">
+     <widget class="QTableWidget" name="MaterialTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Material_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Supplier_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Cost</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Quantity</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Type</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadMaterialButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Supplier_page">
+     <widget class="QTableWidget" name="SupplierTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Supplier_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Location</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadSupplierButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Production_page">
+     <widget class="QTableWidget" name="ProductionTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>3</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Production_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>StartDate</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>CompletionDate</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadProductionButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="PRMA_page">
+     <widget class="QTableWidget" name="PRMATable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>2</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Production_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Material_ID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadPRMAButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PushButton</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Payment_page">
+     <widget class="QTableWidget" name="PaymentTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>4</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Payment_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>DepositDate</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AmountRemaining</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Method</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadPaymentButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Order_page">
+     <widget class="QTableWidget" name="OrderTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>8</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Order_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Customer_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Production_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Payment_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Installation_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Permit_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Employee_ID(designer)</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>HOA_ID</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadOrderButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Employee_page">
+     <widget class="QTableWidget" name="EmployeeTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>EmployeeType</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadEmployeeButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Designer_page">
+     <widget class="QTableWidget" name="DesignerTable">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AssignedToJob</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadDesignerButton">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Vehicle_page">
+     <widget class="QTableWidget" name="VehicleTable">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>5</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>LicensePlate_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>VehicleName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>VehicleMod</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>VehicleYear</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Color</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadVehicleButton">
+      <property name="geometry">
+       <rect>
+        <x>910</x>
+        <y>560</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Fabricator_page">
+     <widget class="QTableWidget" name="FabricatorTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AssignedToJob</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadFabricatorButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Welder_page">
+     <widget class="QTableWidget" name="WelderTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AssignedToJob</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadWelderButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Contractor_page">
+     <widget class="QTableWidget" name="ContractorTable">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>6</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AssignedToJob</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadContractorButton">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>580</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Driver_page">
+     <widget class="QTableWidget" name="DriverTable">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>40</y>
+        <width>921</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>7</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column>
+       <property name="text">
+        <string>Employee_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LicensePlate_ID</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>LastName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>FirstName</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Address</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Phone</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>AssignedToJob</string>
+       </property>
+      </column>
+     </widget>
+     <widget class="QPushButton" name="LoadDriverButton">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>570</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>LOAD</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="JOIN_button">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>570</y>
+      <width>101</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>JOIN Queries</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

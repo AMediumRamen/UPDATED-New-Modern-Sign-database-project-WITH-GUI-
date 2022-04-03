@@ -23,7 +23,7 @@ class MainWindow:
         #WHAT CLICKING EACH BUTTON WILL DO (CALL FUNCTION BELOW)
         self.ui.Add_button.clicked.connect(self.showAdd)
         self.ui.Contractor_button.clicked.connect(self.showContractor)
-        self.ui.Contractor_button.clicked.connect(self.showCountry)
+        self.ui.Country_button.clicked.connect(self.showCountry)
         self.ui.Customer_button.clicked.connect(self.showCustomer)
         self.ui.Delete_button.clicked.connect(self.showDelete)
         self.ui.Designer_button.clicked.connect(self.showDesigner)
