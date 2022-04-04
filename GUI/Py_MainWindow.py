@@ -1,3 +1,6 @@
+from msilib.schema import Error
+from optparse import Values
+from sqlite3 import Cursor
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
@@ -73,6 +76,13 @@ class MainWindow:
         self.ui.LoadSupplierButton.clicked.connect(self.loadSupplier)
         self.ui.LoadVehicleButton.clicked.connect(self.loadVehicle)
         self.ui.LoadWelderButton.clicked.connect(self.loadWelder)
+
+
+
+
+        #MODIFYING DATA BUTTONS
+        self.ui.InsertDataButton.clicked.connect(self.addData)
+        self.ui.UpdateDataButton.clicked.connect(self.updateData)
 
 
 
@@ -337,7 +347,34 @@ class MainWindow:
             self.ui.WelderTable.insertRow(row)
             for column, column_data in enumerate(row_data):
                 self.ui.WelderTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+
+
+    #MODIFYING DATA FUNCTIONS
+
+    def addData(self):
+        tableName = self.ui.TableNameLineEdit.text()
+        Values = self.ui.ValuesLineEdit.text()
+
+        self.cursor.execute(("INSERT INTO %s VALUES %s")%(tableName,Values))
+        self.ui.AddPageMessage.setText("SUCCESS!")
+        self.cursor.commit()
+
+    def updateData(self):
+        tableName =self.ui.TableNameLineEditUpdate.text()
+        setClause = self.ui.SetLineEdit.text()
+        toWhat =self.ui.ToWhatLineEdit.text()
+        where = self.ui.WhereLineEdit.text()
+
+        self.cursor.execute("UPDATE %s SET %s = '%s' WHERE %s;"%(tableName,setClause,toWhat,where))
         
+        self.ui.UpdateMessageLabel.setText("SUCCESS")
+        self.cursor.commit()
+
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

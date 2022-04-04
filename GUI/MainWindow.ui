@@ -335,13 +335,13 @@
     <property name="geometry">
      <rect>
       <x>170</x>
-      <y>160</y>
+      <y>170</y>
       <width>1011</width>
       <height>651</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Home_page">
      <widget class="QLabel" name="label">
@@ -364,8 +364,235 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="Add_page"/>
-    <widget class="QWidget" name="Update_page"/>
+    <widget class="QWidget" name="Add_page">
+     <widget class="QWidget" name="horizontalLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>30</y>
+        <width>914</width>
+        <height>158</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="AddPageTopLayout">
+       <item>
+        <widget class="QLabel" name="TableNameLabel">
+         <property name="text">
+          <string>Table Name</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="TableNameLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>187</y>
+        <width>911</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="AddPageBottomLayout">
+       <item>
+        <widget class="QLabel" name="ValuesLabel">
+         <property name="text">
+          <string>Values         </string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="ValuesLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="AddPageMessage">
+      <property name="geometry">
+       <rect>
+        <x>58</x>
+        <y>355</y>
+        <width>901</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>PLEASE INSERT TABLE NAME IN THE TABLE NAME SECTION AND THE VALUES IN THE VALUES SECTION IN THE FORMAT (A,B,C,...)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="InsertDataButton">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>520</y>
+        <width>211</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Insert Data</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Update_page">
+     <widget class="QWidget" name="horizontalLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>57</y>
+        <width>441</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="UpdatePageLayout2">
+       <item>
+        <widget class="QLabel" name="TableNameLabelUpdate">
+         <property name="text">
+          <string>Table</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="TableNameLineEditUpdate"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>197</y>
+        <width>441</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="UpdatePageLayout1">
+       <item>
+        <widget class="QLabel" name="SetLabel">
+         <property name="text">
+          <string>SET  </string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="SetLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>350</y>
+        <width>441</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="UpdatePageLayout1_2">
+       <item>
+        <widget class="QLabel" name="WhereLabel">
+         <property name="text">
+          <string>WHERE</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="WhereLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QPushButton" name="UpdateDataButton">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>540</y>
+        <width>211</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Update Data</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UpdateInfoLabel">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>60</y>
+        <width>471</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;CAUTION MUST FOLLOW FOLLOWING EXAMPLE&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;UPDATE TableName&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;SET ColumnName = x&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;WHERE tableName_Id = x&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;DO NOT OMMIT THE WHERE CLAUSE&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="UpdateMessageLabel">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>530</y>
+        <width>261</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Checking for Completion&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>270</y>
+        <width>441</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="UpdatePageLayout1_3">
+       <item>
+        <widget class="QLabel" name="ToWhatLabel">
+         <property name="text">
+          <string>TO What  </string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::AutoText</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="ToWhatLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
     <widget class="QWidget" name="Delete_page"/>
     <widget class="QWidget" name="Customer_page">
      <widget class="QTableWidget" name="CustomerTable">
