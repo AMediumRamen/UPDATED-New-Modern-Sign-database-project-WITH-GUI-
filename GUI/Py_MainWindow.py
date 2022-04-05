@@ -1,6 +1,4 @@
-from msilib.schema import Error
-from optparse import Values
-from sqlite3 import Cursor
+
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
