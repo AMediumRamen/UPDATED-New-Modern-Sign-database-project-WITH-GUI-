@@ -17,7 +17,7 @@ CREATE TABLE [Customer] (
   [CompanyName] VARCHAR(50),
   [CustomerPhone] VARCHAR(20),
   [CustomerEmail] VARCHAR(50),
-  PRIMARY KEY ([CustomerID])
+  PRIMARY KEY ([Customer_ID])
 );
 
 CREATE TABLE [Supplier] (
@@ -160,7 +160,7 @@ CREATE TABLE [Order] (
       REFERENCES [HOA_ARC]([HOAARC_ID]),
   CONSTRAINT [FK_Order.Customer_ID]
     FOREIGN KEY ([Customer_ID])
-      REFERENCES [Customer]([CustomerID]),
+      REFERENCES [Customer]([Customer_ID]),
   CONSTRAINT [FK_Order.Permit_ID]
     FOREIGN KEY ([Permit_ID])
       REFERENCES [Permit]([Permit_ID]),
@@ -529,9 +529,9 @@ ORDER BY [Date Approved]
 
 
 --Join of all orders and their customer contact info 
-SELECT [dbo].[Order].Order_ID, Customer.CustomerID, Customer.CustomerLastName, Customer.CustomerFirstName, Customer.CustomerEmail, Customer.CustomerPhone
+SELECT [dbo].[Order].Order_ID, Customer.Customer_ID, Customer.CustomerLastName, Customer.CustomerFirstName, Customer.CustomerEmail, Customer.CustomerPhone
 FROM [dbo].[Order]
-Inner Join Customer ON [dbo].[Order].Customer_ID = Customer.CustomerID
+Inner Join Customer ON [dbo].[Order].Customer_ID = Customer.Customer_ID
 
 
 --Join of the payment methods with the orders
