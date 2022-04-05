@@ -4,7 +4,7 @@ from sqlite3 import Cursor
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
-from matplotlib.pyplot import show
+from matplotlib.pyplot import show, table
 from PyQt5 import QtWidgets
 from Ui_MainWindow import Ui_MainWindow
 import pyodbc
@@ -83,6 +83,7 @@ class MainWindow:
         #MODIFYING DATA BUTTONS
         self.ui.InsertDataButton.clicked.connect(self.addData)
         self.ui.UpdateDataButton.clicked.connect(self.updateData)
+        self.ui.DeleteDataButton.clicked.connect(self.deleteData)
 
 
 
@@ -371,6 +372,15 @@ class MainWindow:
         self.cursor.execute("UPDATE %s SET %s = '%s' WHERE %s;"%(tableName,setClause,toWhat,where))
         
         self.ui.UpdateMessageLabel.setText("SUCCESS")
+        self.cursor.commit()
+
+    def deleteData(self):
+        tableName = self.ui.DeleteFromLineEdit.text()
+        where = self.ui.DeleteWhereLineEdit.text()
+
+        self.cursor.execute("DELETE FROM %s WHERE %s;"%(tableName,where))
+
+        self.ui.DeletePageMessage.setText("SUCCESS")
         self.cursor.commit()
 
 

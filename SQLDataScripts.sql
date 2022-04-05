@@ -11,7 +11,7 @@ CREATE TABLE [HOA_ARC] (
 );
 
 CREATE TABLE [Customer] (
-  [CustomerID] INT,
+  [Customer_ID] INT,
   [CustomerLastName] VARCHAR(50),
   [CustomerFirstName] VARCHAR(50),
   [CompanyName] VARCHAR(50),

@@ -341,7 +341,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="Home_page">
      <widget class="QLabel" name="label">
@@ -466,7 +466,7 @@
        <item>
         <widget class="QLabel" name="TableNameLabelUpdate">
          <property name="text">
-          <string>Table</string>
+          <string>Table         </string>
          </property>
          <property name="textFormat">
           <enum>Qt::AutoText</enum>
@@ -491,7 +491,7 @@
        <item>
         <widget class="QLabel" name="SetLabel">
          <property name="text">
-          <string>SET  </string>
+          <string>SET           </string>
          </property>
          <property name="textFormat">
           <enum>Qt::AutoText</enum>
@@ -516,7 +516,7 @@
        <item>
         <widget class="QLabel" name="WhereLabel">
          <property name="text">
-          <string>WHERE</string>
+          <string>WHERE    </string>
          </property>
          <property name="textFormat">
           <enum>Qt::AutoText</enum>
@@ -593,7 +593,91 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="Delete_page"/>
+    <widget class="QWidget" name="Delete_page">
+     <widget class="QWidget" name="horizontalLayoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>40</y>
+        <width>811</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="DeletePageLayout1">
+       <item>
+        <widget class="QLabel" name="DeleteFromLabel">
+         <property name="text">
+          <string>DELETE FROM</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DeleteFromLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>190</y>
+        <width>811</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="DeletePageLayout2">
+       <item>
+        <widget class="QLabel" name="DeleteWhereLabel">
+         <property name="text">
+          <string>DELETE WHERE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="DeleteWhereLineEdit"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="DeletePageCaution">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>330</y>
+        <width>791</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;IN THE FIRST BOX ENTER JUST THE TABLE NAME &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;IN THE SECOND BOX ENTER THE CONDITION SUCH AS Customer_ID = '1'&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;THE END RESULT MUST FOLLOW FORMAT&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;DELETE FROM TableName WHERE Condition&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="DeletePageMessage">
+      <property name="geometry">
+       <rect>
+        <x>328</x>
+        <y>485</y>
+        <width>381</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;Checking For Changes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="DeleteDataButton">
+      <property name="geometry">
+       <rect>
+        <x>434</x>
+        <y>573</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Delete Data</string>
+      </property>
+     </widget>
+    </widget>
     <widget class="QWidget" name="Customer_page">
      <widget class="QTableWidget" name="CustomerTable">
       <property name="geometry">
