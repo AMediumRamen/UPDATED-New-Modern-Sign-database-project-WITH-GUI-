@@ -14,8 +14,8 @@ class MainWindow:
         self.ui.setupUi(self.main_win)
 
         conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
-                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
-                      'Database=test1;'
+                      'Server=cot-cis3365-09.cougarnet.uh.edu;'
+                      'Database=testing;'
                       'Trusted_Connection=yes;')
         self.cursor = conn.cursor()
 
