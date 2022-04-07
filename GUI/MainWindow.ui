@@ -334,14 +334,14 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>170</y>
-      <width>1011</width>
-      <height>651</height>
+      <x>150</x>
+      <y>120</y>
+      <width>1091</width>
+      <height>721</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="Home_page">
      <widget class="QLabel" name="label">
@@ -676,6 +676,402 @@
       <property name="text">
        <string>Delete Data</string>
       </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="JOIN_page">
+     <widget class="QPushButton" name="NotAtWorkFabricator">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Not at work (Employee_ID, Fabricator)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NotAtWorkWelder">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Not at work(Employee_ID, Welder)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NotAtWorkContractor">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Not at work (Employee_ID, Contractor)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NotAtWorkDesigner">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Not at work (Employee_ID, Designer)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="NotAtWorkDriver">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Not at work (Employee_ID, Driver)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AtWorkFabricator">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>200</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At Work (Employee_ID, Fabricator)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AtWorkWelder">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>230</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At Work (Employee_ID, Welder)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AtWorkContractor">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>260</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At Work (Employee_ID, Contractor)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AtWorkDesigner">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At Work (Employee_ID, Deisgner)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AtWorkDriver">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>320</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>At Work (Employee_ID, Driver)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="AddressInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>350</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Installation_ID / InstallationAddr_ID (address info)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ProjectedInstallDate">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>380</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Orders / Install Date (Order_ID,Installation_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="InstalledOrders">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>410</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Installed Orders (Order_ID,Installation_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="OrderPermitInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order Permit Info (Order_ID, Permit_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="OrderHOAInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>470</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order HOA info (Order_ID, HOA_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="OrderCustomerInfo">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>500</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order Customer info (Order_ID, Customer_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="OrderPaymentMethod">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>530</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Order Payment Method (Order_ID, Payment_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="PaidOrder">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>560</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Paid Order (Order_ID, Payment_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CompletedProduction">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>590</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Completed Production (Order_ID, Production_ID)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="MaterialToSupplier">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>620</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>7</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Materials/Suppliers</string>
+      </property>
+     </widget>
+     <widget class="QTableWidget" name="JOINTable">
+      <property name="geometry">
+       <rect>
+        <x>235</x>
+        <y>51</y>
+        <width>851</width>
+        <height>601</height>
+       </rect>
+      </property>
+      <property name="rowCount">
+       <number>10</number>
+      </property>
+      <property name="columnCount">
+       <number>8</number>
+      </property>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <row/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
      </widget>
     </widget>
     <widget class="QWidget" name="Customer_page">
@@ -1370,7 +1766,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>LOAD</string>
       </property>
      </widget>
     </widget>

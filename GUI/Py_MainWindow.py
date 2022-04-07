@@ -14,8 +14,8 @@ class MainWindow:
         self.ui.setupUi(self.main_win)
 
         conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
-                      'Server=cot-cis3365-09.cougarnet.uh.edu;'
-                      'Database=testing;'
+                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+                      'Database=test1;'
                       'Trusted_Connection=yes;')
         self.cursor = conn.cursor()
 
@@ -52,6 +52,7 @@ class MainWindow:
         self.ui.Update_button.clicked.connect(self.showUpdate)
         self.ui.Vehicle_button.clicked.connect(self.showVehicle)
         self.ui.Welder_button.clicked.connect(self.showWelder)
+        self.ui.JOIN_button.clicked.connect(self.showJOIN)
 
         #LOAD DATA BUTTONS (FUNCTIONS BELOW)
         self.ui.LoadContractorButton.clicked.connect(self.loadContractor)
@@ -82,6 +83,30 @@ class MainWindow:
         self.ui.InsertDataButton.clicked.connect(self.addData)
         self.ui.UpdateDataButton.clicked.connect(self.updateData)
         self.ui.DeleteDataButton.clicked.connect(self.deleteData)
+
+
+        #JOIN PAGE BUTTONS
+        self.ui.NotAtWorkFabricator.clicked.connect(self.loadNotAtWorkFabricator)
+        self.ui.NotAtWorkWelder.clicked.connect(self.loadNotAtWorkWelder)
+        self.ui.NotAtWorkContractor.clicked.connect(self.loadNotAtWorkContractor)
+        self.ui.NotAtWorkDesigner.clicked.connect(self.loadNotAtWorkDesigner)
+        self.ui.NotAtWorkDriver.clicked.connect(self.loadNotAtWorkDriver)
+        self.ui.AtWorkFabricator.clicked.connect(self.loadAtWorkFabricator)
+        self.ui.AtWorkWelder.clicked.connect(self.loadAtWorkWelder)
+        self.ui.AtWorkContractor.clicked.connect(self.loadAtWorkContractor)
+        self.ui.AtWorkDesigner.clicked.connect(self.loadAtWorkDesigner)
+        self.ui.AtWorkDriver.clicked.connect(self.loadAtWorkDriver)
+        self.ui.AddressInfo.clicked.connect(self.loadAddressInfo)
+        self.ui.ProjectedInstallDate.clicked.connect(self.loadProjectedInstallationDate)
+        self.ui.InstalledOrders.clicked.connect(self.loadInstalledOrders)
+        self.ui.OrderPermitInfo.clicked.connect(self.loadOrderPermitInfo)
+        self.ui.OrderHOAInfo.clicked.connect(self.loadOrderHOAInfo)
+        self.ui.OrderCustomerInfo.clicked.connect(self.loadOrderCustomerInfo)
+        self.ui.OrderPaymentMethod.clicked.connect(self.loadOrderPaymentMethod)
+        self.ui.PaidOrder.clicked.connect(self.loadPaidOrder)
+        self.ui.CompletedProduction.clicked.connect(self.loadCompletedProduction)
+        self.ui.MaterialToSupplier.clicked.connect(self.loadMaterialSupplier)
+
 
 
 
@@ -162,6 +187,9 @@ class MainWindow:
         
     def showWelder(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Welder_page)
+    
+    def showJOIN(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.JOIN_page)
 
 
 
@@ -346,6 +374,190 @@ class MainWindow:
             self.ui.WelderTable.insertRow(row)
             for column, column_data in enumerate(row_data):
                 self.ui.WelderTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+
+    # JOIN PAGE FUNCTIONS
+    def loadNotAtWorkFabricator(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Fabricator.LastName,Fabricator.FirstName FROM Employee INNER JOIN Fabricator ON Employee.Employee_ID = Fabricator.Employee_ID WHERE AssignedToJob = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadNotAtWorkWelder(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, [dbo].[Welder].LastName,[dbo].[Welder].FirstName FROM Employee INNER JOIN [dbo].[Welder] ON Employee.Employee_ID = [dbo].[Welder].Employee_ID WHERE AssignedToJob = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    
+    def loadNotAtWorkContractor(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Contractor.LastName,Contractor.FirstName FROM Employee INNER JOIN Contractor ON Employee.Employee_ID = Contractor.Employee_ID WHERE AssignedToJob = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadNotAtWorkDesigner(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Designer.LastName,Designer.FirstName FROM Employee INNER JOIN Designer ON Employee.Employee_ID = Designer.Employee_ID WHERE AssignedToJob = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    def loadNotAtWorkDriver(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Driver.LastName,Driver.FirstName FROM Employee INNER JOIN Driver ON Employee.Employee_ID = Driver.Employee_ID WHERE AssignedToJob = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadAtWorkFabricator(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Fabricator.LastName,Fabricator.FirstName FROM Employee INNER JOIN Fabricator ON Employee.Employee_ID = Fabricator.Employee_ID WHERE AssignedToJob = 1")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+    
+
+    def loadAtWorkWelder(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, [dbo].[Welder].LastName,[dbo].[Welder].FirstName FROM Employee INNER JOIN [dbo].[Welder] ON Employee.Employee_ID = [dbo].[Welder].Employee_ID WHERE AssignedToJob = 1")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    def loadAtWorkContractor(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Contractor.LastName,Contractor.FirstName FROM Employee INNER JOIN Contractor ON Employee.Employee_ID = Contractor.Employee_ID WHERE AssignedToJob = 1")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    def loadAtWorkDesigner(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Designer.LastName,Designer.FirstName FROM Employee INNER JOIN Designer ON Employee.Employee_ID = Designer.Employee_ID WHERE AssignedToJob = 1")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    def loadAtWorkDriver(self):
+        result = self.cursor.execute("SELECT Employee.Employee_ID, Driver.LastName,Driver.FirstName FROM Employee INNER JOIN Driver ON Employee.Employee_ID = Driver.Employee_ID WHERE AssignedToJob = 1")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadAddressInfo(self):
+        result = self.cursor.execute("SELECT Installation.Installation_ID, [Installation Address].InstallationAddress_ID,[Installation Address].AddressLine1,[Installation Address].AddressLine2,[Installation Address].ZipCode,[Installation Address].City FROM Installation Right Join [Installation Address] ON Installation.InstallationAddress_ID = [Installation Address].InstallationAddress_ID")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+    
+
+
+    def loadProjectedInstallationDate(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Installation.Installation_ID, Installation.ProjectedInstallationDate FROM [dbo].[Order] Inner Join Installation ON [dbo].[Order].Installation_ID = Installation.Installation_ID ORDER BY ProjectedInstallationDate")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadInstalledOrders(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Installation.Installation_ID, Installation.ActualInstallationDate FROM [dbo].[Order] Inner Join Installation ON [dbo].[Order].Installation_ID = Installation.Installation_ID")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadOrderPermitInfo(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID,Permit.Permit_ID,Permit.PermitExpDate,Permit.[Date Received] FROM [dbo].[Order] Inner Join Permit ON [dbo].[Order].Permit_ID = Permit.Permit_ID ORDER BY [Date Received]")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+    def loadOrderHOAInfo(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID,[HOA_ARC].HOAARC_ID, [HOA_ARC].[HOAARC Name], [HOA_ARC].[HOAARC Address], [HOA_ARC].[HOA Phone], [HOA_ARC].[HOA Email],[HOA_ARC].[Contact Person], [HOA_ARC].[Date Approved] FROM [dbo].[Order] Inner Join [HOA_ARC] ON [dbo].[Order].HOAARC_ID = [HOA_ARC].HOAARC_ID ORDER BY [Date Approved]")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+    def loadOrderCustomerInfo(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Customer.Customer_ID, Customer.CustomerLastName, Customer.CustomerFirstName, Customer.CustomerEmail, Customer.CustomerPhone FROM [dbo].[Order] Inner Join Customer ON [dbo].[Order].Customer_ID = Customer.Customer_ID")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+        
+    
+    def loadOrderPaymentMethod(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Payment.Payment_ID, Payment.MethodOfPayment FROM [dbo].[Order] Left Join Payment ON [dbo].[Order].Payment_ID = Payment.Payment_ID")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+    def loadPaidOrder(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Payment.Payment_ID, Payment.AmountRemaining FROM [dbo].[Order] Left Join Payment ON [dbo].[Order].Payment_ID = Payment.Payment_ID WHERE AmountRemaining = 0")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+    
+
+    def loadCompletedProduction(self):
+        result = self.cursor.execute("SELECT [dbo].[Order].Order_ID, Production.Production_ID, Production.CompletionDate FROM [dbo].[Order] INNER JOIN Production ON [dbo].[Order].Production_ID = Production.Production_ID WHERE CompletionDate IS NOT NULL")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+    def loadMaterialSupplier(self):
+        result = self.cursor.execute("SELECT Material.Material_ID,Material.MaterialName, Material.MaterialCost, Supplier.Supplier_ID FROM Material INNER JOIN Supplier ON Material.Supplier_ID = Supplier.Supplier_ID")
+        self.ui.JOINTable.setRowCount(0)
+        for row , row_data in enumerate(result):
+            self.ui.JOINTable.insertRow(row)
+            for column, column_data in enumerate(row_data):
+                self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
 
 
 
