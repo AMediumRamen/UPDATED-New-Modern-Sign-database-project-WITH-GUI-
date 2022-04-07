@@ -269,7 +269,7 @@ class MainWindow:
         
 
     def loadInstallationAddr(self):
-        result = self.cursor.execute("SELECT * FROM Installation Address")
+        result = self.cursor.execute("SELECT * FROM [dbo].[Installation Address]")
         self.ui.InstallationAddrTable.setRowCount(0)
         for row , row_data in enumerate(result):
             self.ui.InstallationAddrTable.insertRow(row)
@@ -374,6 +374,10 @@ class MainWindow:
             self.ui.WelderTable.insertRow(row)
             for column, column_data in enumerate(row_data):
                 self.ui.WelderTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+
 
 
 
@@ -558,6 +562,10 @@ class MainWindow:
             self.ui.JOINTable.insertRow(row)
             for column, column_data in enumerate(row_data):
                 self.ui.JOINTable.setItem(row,column,QtWidgets.QTableWidgetItem(str(column_data)))
+
+
+
+
 
 
 
