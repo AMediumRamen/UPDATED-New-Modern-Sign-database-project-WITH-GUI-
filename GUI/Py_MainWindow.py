@@ -15,7 +15,7 @@ class MainWindow:
 
         conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
                       'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
-                      'Database=test1;'
+                      'Database=Test2;'
                       'Trusted_Connection=yes;')
         self.cursor = conn.cursor()
 
@@ -269,7 +269,7 @@ class MainWindow:
         
 
     def loadInstallationAddr(self):
-        result = self.cursor.execute("SELECT * FROM [dbo].[Installation Address]")
+        result = self.cursor.execute("SELECT * FROM [dbo].[Installation_Address]")
         self.ui.InstallationAddrTable.setRowCount(0)
         for row , row_data in enumerate(result):
             self.ui.InstallationAddrTable.insertRow(row)
@@ -470,7 +470,7 @@ class MainWindow:
 
 
     def loadAddressInfo(self):
-        result = self.cursor.execute("SELECT Installation.Installation_ID, [Installation Address].InstallationAddress_ID,[Installation Address].AddressLine1,[Installation Address].AddressLine2,[Installation Address].ZipCode,[Installation Address].City FROM Installation Right Join [Installation Address] ON Installation.InstallationAddress_ID = [Installation Address].InstallationAddress_ID")
+        result = self.cursor.execute("SELECT Installation.Installation_ID, [Installation_Address].InstallationAddress_ID,[Installation_Address].AddressLine1,[Installation_Address].AddressLine2,[Installation_Address].ZipCode,[Installation_Address].City FROM Installation Right Join [Installation_Address] ON Installation.InstallationAddress_ID = [Installation_Address].InstallationAddress_ID")
         self.ui.JOINTable.setRowCount(0)
         for row , row_data in enumerate(result):
             self.ui.JOINTable.insertRow(row)
