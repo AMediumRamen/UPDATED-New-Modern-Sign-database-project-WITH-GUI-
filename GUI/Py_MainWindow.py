@@ -1,4 +1,5 @@
 
+from http import server
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtWidgets import QMainWindow
@@ -13,11 +14,25 @@ class MainWindow:
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self.main_win)
 
-        conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
-                      'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
-                      'Database=Test2;'
-                      'Trusted_Connection=yes;')
-        self.cursor = conn.cursor()
+        # conn = pyodbc.connect('Driver={ODBC DRIVER 17 for SQL server};'
+        #               'Server=LAPTOP-0H06NGKU\MSSQLSERVER01;'
+        #               'Database=Test2;'
+        #               'Trusted_Connection=yes;')
+        # self.cursor = conn.cursor()
+
+
+        #POPULATING HOME PAGE DROP DOWN LIST
+        self.ui.AlterDataDropDown.addItem("Add")
+        self.ui.AlterDataDropDown.addItem("Update")
+        self.ui.AlterDataDropDown.addItem("Delete")
+
+        #DROP DOWN ACTIVATION
+        self.ui.AlterDataDropDown.currentTextChanged.connect(self.dropDownActivate)
+
+
+    
+            
+
 
 
 
@@ -28,11 +43,11 @@ class MainWindow:
 
 
         #WHAT CLICKING EACH BUTTON WILL DO (CALL FUNCTION BELOW)
-        self.ui.Add_button.clicked.connect(self.showAdd)
+        # self.ui.Add_button.clicked.connect(self.showAdd)
         self.ui.Contractor_button.clicked.connect(self.showContractor)
         self.ui.Country_button.clicked.connect(self.showCountry)
         self.ui.Customer_button.clicked.connect(self.showCustomer)
-        self.ui.Delete_button.clicked.connect(self.showDelete)
+        # self.ui.Delete_button.clicked.connect(self.showDelete)
         self.ui.Designer_button.clicked.connect(self.showDesigner)
         self.ui.Driver_button.clicked.connect(self.showDriver)
         self.ui.Employee_button.clicked.connect(self.showEmployee)
@@ -49,10 +64,11 @@ class MainWindow:
         self.ui.Production_button.clicked.connect(self.showProduction)
         self.ui.State_button.clicked.connect(self.showState)
         self.ui.Supplier_button.clicked.connect(self.showSupplier)
-        self.ui.Update_button.clicked.connect(self.showUpdate)
+        # self.ui.Update_button.clicked.connect(self.showUpdate)
         self.ui.Vehicle_button.clicked.connect(self.showVehicle)
         self.ui.Welder_button.clicked.connect(self.showWelder)
         self.ui.JOIN_button.clicked.connect(self.showJOIN)
+        self.ui.Connection_button.clicked.connect(self.showConnection)
 
         #LOAD DATA BUTTONS (FUNCTIONS BELOW)
         self.ui.LoadContractorButton.clicked.connect(self.loadContractor)
@@ -83,6 +99,7 @@ class MainWindow:
         self.ui.InsertDataButton.clicked.connect(self.addData)
         self.ui.UpdateDataButton.clicked.connect(self.updateData)
         self.ui.DeleteDataButton.clicked.connect(self.deleteData)
+        self.ui.pushButton.clicked.connect(self.connection)
 
 
         #JOIN PAGE BUTTONS
@@ -110,12 +127,26 @@ class MainWindow:
 
 
 
-    
 
+    
     def show(self):
         self.main_win.show()
 
-    #ACTUAL FUNCTIONS TO CHANGE PAGE
+
+
+
+    #ACTUAL FUNCTIONS TO CHANGE PAGE    
+
+    def dropDownActivate(self,changeTo):
+        if changeTo == "Add":
+            self.ui.AlterDataDropDown.activated.connect(self.showAdd)
+        elif changeTo == "Update":
+            self.ui.AlterDataDropDown.activated.connect(self.showUpdate)
+        elif changeTo == "Delete":
+            self.ui.AlterDataDropDown.activated.connect(self.showDelete)
+
+
+    
     def showAdd(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.Add_page)
 
@@ -191,6 +222,8 @@ class MainWindow:
     def showJOIN(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.JOIN_page)
 
+    def showConnection(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Connection_page)
 
 
 
@@ -567,6 +600,24 @@ class MainWindow:
 
 
 
+    #CONNECT TO SERVER FUNCTION
+    def connection(self):
+        try:
+            server = self.ui.ServerLineEdit.text()
+            database = self.ui.DatabaseLineEdit.text()
+            uid = self.ui.UIDLineEdit.text()
+            pwd = self.ui.PWDLineEdit.text()
+            conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; \
+                        SERVER='+server+'; \
+                        DATABASE='+database+'; \
+                        UID='+uid+'; \
+                        PWD='+ pwd)
+            self.cursor = conn.cursor()
+            self.ui.ConnectionPageMesssage.setText("SUCCESS!")
+            return conn,self.cursor
+            
+        except:
+            self.ui.ConnectionPageMesssage.setText("ERROR OCCURED CHECK INPUT OR CONNECTION AGAIN")
 
 
 
@@ -574,32 +625,41 @@ class MainWindow:
     #MODIFYING DATA FUNCTIONS
 
     def addData(self):
-        tableName = self.ui.TableNameLineEdit.text()
-        Values = self.ui.ValuesLineEdit.text()
+        try:
+            tableName = self.ui.TableNameLineEdit.text()
+            Values = self.ui.ValuesLineEdit.text()
 
-        self.cursor.execute(("INSERT INTO %s VALUES %s")%(tableName,Values))
-        self.ui.AddPageMessage.setText("SUCCESS!")
-        self.cursor.commit()
+            self.cursor.execute(("INSERT INTO %s VALUES %s")%(tableName,Values))
+            self.ui.AddPageMessage.setText("SUCCESS!")
+            self.cursor.commit()
+        except:
+            self.ui.AddPageMessage.setText("ERROR OCCURED CHECK INPUT AGAIN")
 
     def updateData(self):
-        tableName =self.ui.TableNameLineEditUpdate.text()
-        setClause = self.ui.SetLineEdit.text()
-        toWhat =self.ui.ToWhatLineEdit.text()
-        where = self.ui.WhereLineEdit.text()
+        try:
+            tableName =self.ui.TableNameLineEditUpdate.text()
+            setClause = self.ui.SetLineEdit.text()
+            toWhat =self.ui.ToWhatLineEdit.text()
+            where = self.ui.WhereLineEdit.text()
 
-        self.cursor.execute("UPDATE %s SET %s = '%s' WHERE %s;"%(tableName,setClause,toWhat,where))
-        
-        self.ui.UpdateMessageLabel.setText("SUCCESS")
-        self.cursor.commit()
+            self.cursor.execute("UPDATE %s SET %s = '%s' WHERE %s;"%(tableName,setClause,toWhat,where))
+            
+            self.ui.UpdateMessageLabel.setText("SUCCESS")
+            self.cursor.commit()
+        except:
+            self.ui.UpdateMessageLabel.setText("ERROR OCCURED CHECK INPUT AGAIN")
 
     def deleteData(self):
-        tableName = self.ui.DeleteFromLineEdit.text()
-        where = self.ui.DeleteWhereLineEdit.text()
+        try:
+            tableName = self.ui.DeleteFromLineEdit.text()
+            where = self.ui.DeleteWhereLineEdit.text()
 
-        self.cursor.execute("DELETE FROM %s WHERE %s;"%(tableName,where))
+            self.cursor.execute("DELETE FROM %s WHERE %s;"%(tableName,where))
 
-        self.ui.DeletePageMessage.setText("SUCCESS")
-        self.cursor.commit()
+            self.ui.DeletePageMessage.setText("SUCCESS")
+            self.cursor.commit()
+        except:
+            self.ui.DeletePageMessage.setText("ERROR OCCURED CHECK INPUT AGAIN")
 
 
 
