@@ -907,7 +907,7 @@ class Ui_MainWindow(object):
         self.ConnectionPageMesssage.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\">Checking Connection</p></body></html>"))
         self.TableNameLabel.setText(_translate("MainWindow", "Table Name"))
         self.ValuesLabel.setText(_translate("MainWindow", "Values         "))
-        self.AddPageMessage.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-style:normal;\">PLEASE INSERT TABLE NAME IN THE TABLE NAME SECTION AND THE VALUES IN THE VALUES SECTION IN THE FORMAT (A,B,C,...)</span></p></body></html>"))
+        self.AddPageMessage.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-size:8pt; font-style:normal;\">PLEASE INSERT TABLE NAME IN THE TABLE NAME SECTION AND THE VALUES IN THE VALUES SECTION IN THE FORMAT (\'A\',\'B\',\'C\',...)</span></p></body></html>"))
         self.InsertDataButton.setText(_translate("MainWindow", "Insert Data"))
         self.TableNameLabelUpdate.setText(_translate("MainWindow", "Table         "))
         self.SetLabel.setText(_translate("MainWindow", "SET           "))
