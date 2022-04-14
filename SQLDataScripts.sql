@@ -1,4 +1,4 @@
-CREATE DATABASE Test2;
+CREATE DATABASE testing;
 
 CREATE TABLE [HOA_ARC] (
   [HOAARC_ID] INT,
@@ -676,5 +676,4 @@ INNER JOIN [dbo].[Order] ON Customer.Customer_ID = [dbo].[Order].Customer_ID
 INNER JOIN Permit ON [dbo].[Order].Permit_ID = Permit.Permit_ID
 
 
-SELECT * FROM Welder
 

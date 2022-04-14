@@ -37,7 +37,7 @@ class MainWindow:
 
 
         #SET STARTING WIDGET TO Home_Page
-        self.ui.stackedWidget.setCurrentWidget(self.ui.Home_page)
+        self.ui.stackedWidget.setCurrentWidget(self.ui.Connection_page)
 
 
 
